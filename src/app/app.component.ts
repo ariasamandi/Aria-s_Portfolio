@@ -8,7 +8,7 @@ import {SwUpdate} from "@angular/service-worker";
 })
 
 export class AppComponent implements AfterViewInit,OnInit {
-	title = 'Jayant Goel (JayantGoel001)\'s Personal Portfolio';
+	title = 'Aria Goel (JayantGoel001)\'s Personal Portfolio';
 
 	constructor(private swUpdate : SwUpdate) {}
 	ngOnInit(){
