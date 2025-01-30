@@ -8,12 +8,12 @@ import {SwUpdate} from "@angular/service-worker";
 })
 
 export class AppComponent implements AfterViewInit,OnInit {
-	title = 'Aria Goel (JayantGoel001)\'s Personal Portfolio';
+	title = 'Aria Samandi\'s Personal Portfolio';
 
 	constructor(private swUpdate : SwUpdate) {}
 	ngOnInit(){
 		if (this.swUpdate.isEnabled) {
-			this.swUpdate.versionUpdates.subscribe((event) => {
+			this.swUpdate.versionUpdates.subscribe((event: { type: string; }) => {
 				if(event.type === "VERSION_READY"){
 					if(confirm("New update available. Load New Version?")) {
 						this.swUpdate.activateUpdate().then(() => {
@@ -29,7 +29,7 @@ export class AppComponent implements AfterViewInit,OnInit {
 		document.head.appendChild(link);
 
 		console.log(`%c${this.title}`, "color:#F56540; font-size:27px");
-		console.log("%chttps://github.com/JayantGoel001/JayantGoel001.github.io", "font-size:17px");
+		console.log("%chttps://github.com/ariasamandi/ariasamandi.github.io", "font-size:17px");
 	}
 
 	ngAfterViewInit() : void {

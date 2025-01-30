@@ -3,7 +3,7 @@
 	"version": 1,
 	"newProjectRoot": "projects",
 	"projects": {
-		"JayantGoel001": {
+		"Aria-s_Portfolio": {
 			"projectType": "application",
 			"schematics": {
 				"@schematics/angular:application": {
@@ -17,7 +17,8 @@
 				"build": {
 					"builder": "@angular-devkit/build-angular:browser",
 					"options": {
-						"outputPath": "build",
+						"outputPath": "dist",
+						"baseHref": "/Aria-s_Portfolio/",
 						"index": "src/index.html",
 						"main": "src/main.ts",
 						"polyfills": "src/polyfills.ts",
@@ -91,10 +92,10 @@
 					"builder": "@angular-devkit/build-angular:dev-server",
 					"configurations": {
 						"production": {
-							"browserTarget": "JayantGoel001:build:production"
+							"browserTarget": "Aria-s_Portfolio:build:production"
 						},
 						"development": {
-							"browserTarget": "JayantGoel001:build:development"
+							"browserTarget": "Aria-s_Portfolio:build:development"
 						}
 					},
 					"defaultConfiguration": "development"
@@ -102,7 +103,7 @@
 				"extract-i18n": {
 					"builder": "@angular-devkit/build-angular:extract-i18n",
 					"options": {
-						"browserTarget": "JayantGoel001:build"
+						"browserTarget": "Aria-s_Portfolio:build"
 					}
 				},
 				"test": {
@@ -125,7 +126,9 @@
 				},
 				"deploy": {
 					"builder": "angular-cli-ghpages:deploy",
-					"options": {}
+					"options": {
+						"baseHref": "/Aria-s_Portfolio/"
+					}
 				}
 			}
 		}

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ariasamandi.github.io/Aria-s_Portfolio/sitemap_index.xml
