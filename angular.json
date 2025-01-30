@@ -17,8 +17,8 @@
 				"build": {
 					"builder": "@angular-devkit/build-angular:browser",
 					"options": {
-						"outputPath": "dist",
-						"baseHref": "/Aria-s_Portfolio/",
+						"outputPath": "dist/Aria-s_Portfolio",
+						"baseHref": "/",
 						"index": "src/index.html",
 						"main": "src/main.ts",
 						"polyfills": "src/polyfills.ts",
@@ -125,10 +125,11 @@
 					}
 				},
 				"deploy": {
-					"builder": "angular-cli-ghpages:deploy",
-					"options": {
-						"baseHref": "/Aria-s_Portfolio/"
-					}
+				"builder": "angular-cli-ghpages:deploy",
+				"options": {
+					"baseHref": "/",
+					"dir": "dist/Aria-s_Portfolio"
+				}
 				}
 			}
 		}
